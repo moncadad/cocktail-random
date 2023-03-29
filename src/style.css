@@ -1,0 +1,419 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Pacifico&family=Poppins&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); */
+/* gradient body */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600&display=swap');
+:root {
+
+    /* FONTS */
+    --font-branding: 'Fredoka One', cursive;    /*  Branding  */
+
+
+    /*      COLOR PALLERTTE         */
+    --dark-purple: #1a182d;     /* BODY  */
+    --mid-purple: #3e3a5f4d;      /* LG SECTION  */
+    --light-purple: #3e3a5f;     /* SM API SECTION  , OTHER LINKS */
+    --pinky-selected: #ed2e71;            /* BUTTONS, LINKS  */
+    --pinky-hover:  #E4125D;
+    --plain-white: #ffffff;      /* MAIN AND SIBHEADING  */
+    --sub-white:  hsla(200, 3%, 81%, 0.5);
+
+    
+    /*    BUTON        */
+  --btn-pink: var(--pinky);
+  --btn-color: var(--plain-white);
+  --btn-padding: 2em 3em; 
+  --btn-border-radius: 2em;
+    font-size: 16px;
+}
+
+
+/* BODY */
+/* ============================= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--plain-white);
+    /* font-family:'Times New Roman', Times, serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    color: var(--plain-white);
+}
+
+
+li {
+    list-style: none;    
+}
+
+a {
+    text-decoration: none;
+    color: var(--plain-white);
+}
+
+body {    
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: var(--dark-purple);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+/*   NAV          */
+/* ======================================== */
+header {
+    background-color: var(--dark-purple);
+    border: none;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--plain-white);
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.navbar a{    
+    color: var(--(--plain-white));
+    font-family: var(--font-branding);
+}
+.navbar a.branding, footer a.branding {  
+    color: var(--(--plain-white));
+    font-family: var(--font-branding);  
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.branding {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover, footer .socials a i:hover, footer .other-links li a:hover {
+    color: var(--pinky-hover);    
+-webkit-text-shadow: 15px 14px 52px -12px #E4125D;
+-moz-text-shadow: 15px 14px 42px -12px #E4125D;
+text-shadow: 15px 14px 52px -12px #E4125D;
+}
+
+.nav-link:active, footer a:active, footer .socials a i:active, footer .other-links li a:active {
+    color: var(--pinky-selected);
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:var(--plain-white);
+}
+
+
+
+/* HERO SECTION */
+/* ===================================== */
+.section-hero {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+.cta-img {
+    border-radius: 30px;
+    text-align: center;
+    padding: .5rem;
+}
+
+.section-hero .cta-info {
+    margin-top: 3rem;
+}
+
+.section-hero .cta-info p{
+    color: var(--sub-white); 
+}
+
+button {
+    background: var(--pinky-selected);
+    margin: 1.5em 0;
+    /* padding: .75rem; */
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 1.5em;
+    -webkit-box-shadow: 15px 14px 52px -12px #E4125D;
+    -moz-box-shadow: 15px 14px 42px -12px #E4125D;
+    box-shadow: 15px 14px 52px -12px #E4125D;
+}
+button  {
+    padding: .6em 1.5em;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #E4125D;}
+
+button:active {
+    background-color: #E4125D;
+}
+
+
+
+/* RECIPE SECTION */ 
+/* =========================== */
+.section-recipe {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 2rem 2rem;
+}
+.section-recipe h1 {
+    color: var(--sub-white);
+    /* margin-bottom: .5em; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.8rem;   
+}
+
+.cocktail-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin-top: 1rem;  
+    background-color: var(--light-purple);
+    padding:1em 1.5em;
+    border-radius: 20px;
+    color: var(--sub-white);
+}
+.cocktail-info img {
+    width: 20%;
+    border-radius: 50%;
+    margin-right: 1rem ;
+    background-color: var(--plain-white);    
+}
+
+
+.cocktail-info .cocktail-name {
+    margin: 0 auto;
+    text-transform: capitalize;
+}
+.cocktail-info a {      
+    color: var(--sub-white);
+}
+
+
+.next-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.next-btn p {
+    font-weight: 600;
+    color: #ffffffaf;
+    font-size: 1.5em;
+    margin-left: .5rem;
+}
+.next-btn button {
+    border-radius: 1.5em;
+    font-size: 1em;
+    padding: .5em 1em;
+}
+
+.ingredients {
+    color: var(--plain-white);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;   */
+    margin-bottom: 1.5rem;  
+    background-color: var(--light-purple);
+    padding:1em;
+    border-radius: 20px;
+}
+
+.ingredients li {    
+    color: var(--sub-white);
+    margin: .5em;
+}
+
+/* FOOTER  */
+/* ===================================== */
+footer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: auto;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer ul li {
+    margin: 1em;    
+    font-size: 20px;
+}
+footer .other-links li a  {
+    color: var(--light-purple);
+    font-family: var(--font-branding);
+}
+
+
+/* RESPONSIVE MOBILE HEADER  */
+/* ===================================== */
+@media (max-width: 850px) {
+        .hamburger {
+            display: block;
+        }    
+    
+        /* below will happen when hamburer active */
+        /* hamburger will hide second bar (become transparent) */
+        .hamburger.active .bar:nth-child(2){
+            opacity: 0;
+        }
+        /* hamburger will rotate 1st bar for x */
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+    
+          /* hamburger will rotate 3rd bar for x */
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }    
+        .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            gap: 0;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+    
+        .nav-item {
+            margin: 16px 0; 
+        }
+        .nav-item:hover { 
+            color: var(--pinky-hover);
+        }
+        .nav-menu.active {
+            left: 0;            
+        background-color: var(--light-purple);
+        }
+    }
+    
+    
+/* RESPONSIVE DESKTOP BODY */
+/* ===================================== */
+@media (min-width: 850px) {
+
+   /* HERO SECITION */
+    .section-hero {
+        /* flex-direction: row; */
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3rem 0;
+    }
+    .cta-info {
+        font-size:2rem;
+        line-height: 70px;
+        text-transform: capitalize;
+    }
+
+    .cta-img {
+        width: 30%;
+    }
+    .section-recipe {
+        justify-content: space-around;
+        padding: 3rem 0;
+        color: var(--plain-white);
+    }
+
+    #recipe-header {
+        align-self: center;
+        font-size: 60px;
+    }
+    .section-recipe .recipe-info{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: var(--mid-purple);
+        padding: 4rem 0;
+        border-radius: 2rem;
+        margin: .5rem 0 4rem 0;
+    }
+    .drink-name img, .drink-name a, .drink-name p{  
+        display: none;
+    }
+
+    #drinkName {
+        font-size: 50px;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    .next-btn {
+        text-align: center;
+        margin-left: .5em;        
+    }
+
+    .cocktail-img {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+footer {
+    flex-direction: row;
+    align-items: center;  
+    justify-content: space-around;
+    
+}
+.branding {
+    margin-right: 7em;
+}
+
+}
+
+
